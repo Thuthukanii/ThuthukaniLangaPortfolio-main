@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio Website Design</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <!----Font awesome cdn  font icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -39,7 +39,7 @@
                     <img src="images/main_photo.jpg" alt="profile pic">
                  </div>
                  <div class="hero-text">
-                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h5>Hi I'm a <span class="input">Frontend Developer</span></h5>
                     <h1>Thuthukani Langa</h1>
                     <p> I am a passionate software developer specializing in full-stack web development. With a strong foundation in both front-end and back-end technologies, I enjoy building dynamic, responsive, and user-friendly web applications that solve real-world problems. My expertise spans various modern technologies and frameworks, including JavaScript, React, Node.js, and Python, allowing me to create seamless and efficient solutions from conception to deployment.
 
@@ -52,19 +52,41 @@
                     </div>
 
                     <div class="social">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/thuthukani-langa-aa90341a5"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/Thuthukanii"><i class="fa-brands fa-github"></i></a>
                         <box-icon type='logo' name='github'></box-icon>
                     </div>
                  </div>
             </div>
+            
         </div>
      </div>
     </section>
-    <section class="Contact">
-        <div class="About">
-            <h3> My Contact</h3>
+
+    <section class="Contact-Form">
+        <div class="contact-form-container">
+            <h2>Contact Me</h2>
+            <form action="/submit_form" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </section>
      <!---typed js for typing text effect-->
@@ -81,7 +103,7 @@
         })
 
         var typed=new Typed(".input",{
-            strings:["Frontend Developer","Backend Developer","Web Developer"],
+            strings:["Frontend Developer","Backend Developer","Web Developer", "Full Stack Developer", "Mobile Developer", "Applications Developer"],
             typedSpeed:70,
             backSpeed:55,
             loop:true
