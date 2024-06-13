@@ -215,6 +215,81 @@ nav .navlinks li a{
 .langa {
     color:#007ced;
 }
+.container-edu{
+    background-color: #222;
+}
+.col {
+    background-color: #222;
+}
+.container{
+	width: 100%;
+	padding: 35px 10%;
+}
+.container{
+	padding-right: calc(10% - 30px);
+}
+main.row{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+}
+.col header.title{
+	font-family: helvetica;
+	color: #007ced;
+	padding: 0px 0px 20px 30px;
+}
+.col .contents{
+	padding: 0px 30px;
+	border-left: 20px solid #222;
+}
+.col .contents .box{
+	position: relative;
+	padding: 20px;
+	border: 1px solid #222;
+	background-color: #353535;
+	cursor: pointer;
+	transition: all 0.4s;
+	margin-bottom: 20px;
+}
+.col .contents .box:hover{
+	box-shadow: 0px 3px 12px 0px #222;
+	border: 1px solid transparent;
+}
+.col .contents .box::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	right: calc(100% + 22px);
+	top: 0;
+	background-color: #007ced;
+	border: 2px solid #222;
+}
+.box h4{
+	position: relative;
+	color: #007ced;
+}
+.box h3{
+	font-size: 19px;
+	padding: 10px 0px 6px;
+	font-family: helvetica;
+	color: #007ced;
+}
+.box p{
+	line-height: 1.2;
+	color: #ffffff;
+	font-size: 17px;
+}
+@media(max-width: 768px){
+	main.row{
+		grid-template-columns: 1fr;
+	}
+	.row .col:nth-child(2){
+		margin-top: 30px;
+	}
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -242,7 +317,7 @@ nav .navlinks li a{
     margin-bottom: 20px;
     font-size: 24px;
     text-align: center;
-    color :#fff
+    color :#007ced;
 }
 
 .form-group {
