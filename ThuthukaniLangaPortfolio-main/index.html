@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <!----Font awesome cdn  font icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+     <script type="text/javascript">
+         (function(){
+             emailjs.init("Thuthukani");
+         })();
+     </script>
 </head>
 <body>
     <section class="home">
@@ -161,7 +167,10 @@
     </section>
      <!---typed js for typing text effect-->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     
+
      <script>
+
         /** creating button click show hide navbar **/
         var togglebtn=document.querySelector(".togglebtn");
         var nav=document.querySelector(".navlinks");
@@ -178,6 +187,39 @@
             backSpeed:55,
             loop:true
         })
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Capture the form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // Display the captured information
+        document.getElementById('outputName').textContent = 'Name: ' + name;
+        document.getElementById('outputEmail').textContent = 'Email: ' + email;
+        document.getElementById('outputSubject').textContent = 'Subject: ' + subject;
+        document.getElementById('outputMessage').textContent = 'Message: ' + message;
+        document.getElementById('formOutput').style.display = 'block';
+
+        // You can use a service like EmailJS to send the email
+        // EmailJS code example (make sure to include EmailJS script in your HTML)
+        emailjs.send("service_adtef3t", "template_xl7zoi8", {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message
+        }).then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            console.error('FAILED...', error);
+        });
+    });
+
      </script>
+     
+     
 </body>
 </html>
