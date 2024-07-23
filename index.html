@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <!----Font awesome cdn  font icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
      <script type="text/javascript">
          (function(){
@@ -16,29 +17,37 @@
      </script>
 </head>
 <body>
-    <section class="home">
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-t"></i>
+            <div class="logo-text"><b>Thuthukani <span class="langa">Langa</span></b></div>
+        </div>
+        <nav>
+            <div class="togglebtn">
+                
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--<div class="header-buttons">
+                <button id="theme-toggle" class="theme-toggle"><i class='bx bx-moon'></i></button>
+            </div>-->
+            <ul class="navlinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="ThuthukaniLanga_CV.pdf">Resume</a></li>
+                <li><a href="#container-edu">Education</a></li>
+                <li><a href="#Contact-Form">Contact</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+        <!--   *******  Home Section Starts  *******  -->
+
+    <section class="home" id="home">
      <div class="hero-header">
         <div class="wrapper">
-            <header>
-                <div class="logo">
-                    <i class="fa-solid fa-t"></i>
-                    <div class="logo-text"><b>Thuthukani <span class="langa">Langa</span></b></div>
-                </div>
-                <nav>
-                    <div class="togglebtn">
-                        
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#">Resume</a></li>
-                        <li><a href="#container-edu">Education</a></li>
-                        <li><a href="#Contact-Form">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+            
             <div class="container">
                  <div class="hero-pic">
                     <img src="images/main_photo.jpg" alt="profile pic">
@@ -53,7 +62,7 @@
 
                     <div class="btn-group">
                        <a href="ThuthukaniLanga_CV.pdf" class="btn active">Download CV</a>
-                       <a href="#" class="btn">Contact</a>
+                       <a href="#Contact-Form" class="btn">Contact</a>
                     </div>
 
                     <div class="social">
@@ -67,11 +76,26 @@
         </div>
      </div>
     </section>
-    <div class="container-edu">
-	
+
+        <!--   *******  Home Section Ends  *******  -->
+
+        <!--   *******  Education Section Starts  *******   -->
+    <div class="container-edu" id="container-edu">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+ 
         <main class="row">
+
             <section class="col">
-                    
+                
                 <header class="title">
                     <h2>EDUCATION</h2>
                 </header>
@@ -131,6 +155,10 @@
 
                 </div>
             </section>
+
+            <!--   *******  Experience Section Ends  *******  -->
+
+            <!--   *******  Contact Me Section Starts  *******  -->
         </main>
         <br>
         <br>
@@ -139,10 +167,15 @@
         <br>
     </div>
 
-    <section class="Contact-Form">
+    <section class="Contact-Form" id="Contact-Form">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="contact-form-container"> 
             <h2>Contact Me</h2>
-            <form action="/submit_form" method="post">
+            <form  action="https://formspree.io/f/xdknazpn" method="POST">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -164,62 +197,56 @@
                 </div>
             </form>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </section>
-     <!---typed js for typing text effect-->
+
+            <!--   *******  Contact Me Section Starts  *******  -->
+
+            <!---Typed JS For Typing Text Effect-->
+
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
      
 
      <script>
 
-        /** creating button click show hide navbar **/
+            /** Creating Button Click Show Hide Navbar **/
+
         var togglebtn=document.querySelector(".togglebtn");
         var nav=document.querySelector(".navlinks");
         var links=document.querySelector(".navlinks li");
 
-        togglebtn.addEventListener("click", function(){
+        togglebtn.addEventListener
+        ("click", function()
+        {
             this.classList.toggle("click");
             nav.classList.toggle("open");
         })
 
-        var typed=new Typed(".input",{
-            strings:["Frontend Developer","Backend Developer","Web Developer", "Full Stack Developer", "Mobile Developer", "Applications Developer"],
-            typedSpeed:70,
-            backSpeed:55,
+        var typed=new Typed
+        (".input",
+        {
+            strings:[ "Web Developer", "Software Developer", "Data Analyst", "Business Analyst" ],
+            typedSpeed:100,
+            backSpeed:70,
             loop:true
         })
 
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Capture the form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Display the captured information
-        document.getElementById('outputName').textContent = 'Name: ' + name;
-        document.getElementById('outputEmail').textContent = 'Email: ' + email;
-        document.getElementById('outputSubject').textContent = 'Subject: ' + subject;
-        document.getElementById('outputMessage').textContent = 'Message: ' + message;
-        document.getElementById('formOutput').style.display = 'block';
-
-        // You can use a service like EmailJS to send the email
-        // EmailJS code example (make sure to include EmailJS script in your HTML)
-        emailjs.send("service_adtef3t", "template_xl7zoi8", {
-            from_name: name,
-            from_email: email,
-            subject: subject,
-            message: message
-        }).then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-            console.error('FAILED...', error);
+        document.addEventListener("DOMContentLoaded", () => {
+            if (roles.length) setTimeout(type, 1000);
         });
-    });
-
+ 
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeToggle.innerHTML = document.body.classList.contains('dark-mode') ? "<i class='bx bx-sun'></i>" : "<i class='bx bx-moon'></i>";
+        });
+        
      </script>
      
-     
+
 </body>
 </html>
