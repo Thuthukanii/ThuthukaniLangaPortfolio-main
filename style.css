@@ -395,3 +395,8 @@ body.dark-mode {
     background-color: #ebe9e9;
     color: #121212;
 }
+
+#hero-header {
+    background: black;
+    height: 100vh;
+}
